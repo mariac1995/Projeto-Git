@@ -1,0 +1,169 @@
+/* ===== RESET GLOBAL ===== */
+/* Remove margens e preenchimentos padrão de todos os elementos */
+* {
+  margin: 0; /* Remove margem (espaço externo) */
+  padding: 0; /* Remove padding (espaço interno) */
+  box-sizing: border-box; /* Inclui bordas no tamanho total do elemento */
+}
+
+/* ===== ESTILOS DO BODY ===== */
+/* body = elemento que envolve todo o conteúdo da página */
+body {
+  font-family:
+    "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; /* Define a fonte */
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 100%
+  ); /* Fundo com degradê roxo */
+  min-height: 100vh; /* Altura mínima da tela (100% da viewport) */
+  display: flex; /* Usa flexbox para centralizar */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 20px; /* Espaço interno de 20px em mobile */
+}
+
+/* ===== CONTAINER (CONTÊINER DO FORMULÁRIO) ===== */
+.container {
+  background: white; /* Fundo branco */
+  padding: 20px; /* Espaço interno (mobile first) */
+  border-radius: 10px; /* Bordas arredondadas de 10px */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra abaixo da caixa */
+  max-width: 400px; /* Largura máxima de 400px */
+  width: 100%; /* Ocupa 100% da largura disponível */
+}
+
+/* ===== TÍTULO (H1) ===== */
+h1 {
+  text-align: center; /* Alinha o texto ao centro */
+  color: #333; /* Cor cinza escuro */
+  margin-bottom: 20px; /* Espaço abaixo do título em mobile */
+  font-size: 20px; /* Tamanho menor em mobile */
+}
+
+/* ===== GRUPO DE FORMULÁRIO ===== */
+/* .form-group agrupa cada label + input */
+.form-group {
+  margin-bottom: 15px; /* Espaço abaixo de cada grupo */
+}
+
+/* ===== LABELS (TEXTOS DOS CAMPOS) ===== */
+label {
+  display: block; /* Ocupa a linha inteira */
+  margin-bottom: 6px; /* Espaço entre label e input */
+  font-weight: 600; /* Texto mais grasso (negrito) */
+  color: #333; /* Cor cinza escuro */
+  font-size: 13px; /* Tamanho menor em mobile */
+}
+
+/* ===== INPUTS (CAMPOS DE TEXTO E NÚMERO) ===== */
+input[type="text"],
+input[type="number"] {
+  width: 100%; /* Ocupa 100% da largura do container */
+  padding: 10px; /* Espaço interno de 10px em mobile */
+  border: 2px solid #ddd; /* Borda cinza com 2px de espessura */
+  border-radius: 5px; /* Bordas levemente arredondadas */
+  font-size: 14px; /* Tamanho menor em mobile */
+  transition: all 0.3s ease; /* Animação suave de 0.3s */
+  font-family: inherit; /* Usa a mesma fonte do body */
+}
+
+/* ===== FOCUS NOS INPUTS ===== */
+/* :focus = quando o usuário clica no input */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  outline: none; /* Remove o outline padrão do navegador */
+  border-color: #667eea; /* Muda a cor da borda para roxo */
+  box-shadow: 0 0 8px rgba(102, 126, 234, 0.3); /* Adiciona brilho roxo */
+}
+
+/* ===== INPUT READONLY ===== */
+/* readonly = o campo não pode ser editado pelo usuário */
+input[readonly] {
+  background-color: #f8f8f8; /* Fundo cinza claro */
+  color: #667eea; /* Texto roxo */
+  font-weight: bold; /* Texto em negrito */
+  cursor: not-allowed; /* Cursor muda para "proibido" */
+  border-color: #ccc; /* Borda cinza mais clara */
+}
+
+/* ===== GRUPO DE BOTÕES ===== */
+.button-group {
+  display: flex; /* Usa flexbox para alinhar */
+  gap: 10px; /* Espaço de 10px entre os botões */
+  margin-top: 20px; /* Espaço acima dos botões em mobile */
+}
+
+/* ===== BOTÕES ===== */
+button {
+  width: 100%; /* Ocupa 100% da largura em mobile */
+  padding: 10px; /* Espaço interno de 10px em mobile */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Bordas arredondadas */
+  font-size: 14px; /* Tamanho menor em mobile */
+  font-weight: bold; /* Texto em negrito */
+  cursor: pointer; /* Cursor muda para mão ao passar */
+  transition: all 0.3s ease; /* Animação suave de 0.3s */
+}
+
+/* ===== BOTÃO LIMPAR ===== */
+.btn-limpar {
+  background-color: #e0e0e0; /* Fundo cinza claro */
+  color: #333; /* Texto cinza escuro */
+}
+
+/* :hover = quando o mouse passa sobre o botão */
+.btn-limpar:hover {
+  background-color: #d0d0d0; /* Fundo mais escuro ao passar */
+  transform: translateY(-2px); /* Sobe o botão 2px */
+}
+
+/* :active = quando o botão é clicado */
+.btn-limpar:active {
+  transform: translateY(0); /* Volta à posição normal */
+}
+
+/* ===== MEDIA QUERY - RESPONSIVE (DESKTOP) ===== */
+/* @media = condiciona os estilos se a largura for maior ou igual a 768px */
+/* (min-width: 768px) = a partir de 768px de largura (telas maiores) */
+@media (min-width: 768px) {
+  /* Em desktop, aumenta o padding do container */
+  .container {
+    padding: 40px; /* Espaço interno maior em desktop */
+  }
+
+  /* Em desktop, aumenta o tamanho do título */
+  h1 {
+    font-size: 28px; /* Tamanho maior em desktop */
+    margin-bottom: 30px; /* Mais espaço abaixo do título */
+  }
+
+  /* Em desktop, aumenta o espaçamento dos grupos */
+  .form-group {
+    margin-bottom: 20px; /* Mais espaço entre grupos */
+  }
+
+  /* Em desktop, aumenta o tamanho das labels */
+  label {
+    margin-bottom: 8px; /* Mais espaço entre label e input */
+    font-size: 14px; /* Tamanho maior */
+  }
+
+  /* Em desktop, aumenta o tamanho dos inputs */
+  input[type="text"],
+  input[type="number"] {
+    padding: 12px; /* Espaço interno maior */
+    font-size: 16px; /* Tamanho maior */
+  }
+
+  /* Em desktop, aumenta o espaço do grupo de botões */
+  .button-group {
+    margin-top: 30px; /* Mais espaço acima */
+  }
+
+  /* Em desktop, aumenta o tamanho dos botões */
+  button {
+    padding: 12px; /* Espaço interno maior */
+    font-size: 16px; /* Tamanho maior */
+  }
+}
