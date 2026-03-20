@@ -33,6 +33,16 @@ body {
   width: 100%; /* Ocupa 100% da largura disponível */
 }
 
+/* ===== MENSAGEM DE ERRO ===== */
+/* .mensagem-erro-campo = exibe mensagem personalizada embaixo de cada número */
+.mensagem-erro-campo {
+  display: none; /* Começa escondida */
+  color: #d32f2f; /* Texto vermelho escuro */
+  font-size: 12px; /* Tamanho menor */
+  margin-top: 4px; /* Espaço mínimo abaixo do input */
+  font-weight: bold; /* Texto em negrito */
+}
+
 /* ===== TÍTULO (H1) ===== */
 h1 {
   text-align: center; /* Alinha o texto ao centro */
